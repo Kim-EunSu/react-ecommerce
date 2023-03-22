@@ -2,6 +2,7 @@ import {
   KeyboardArrowLeftOutlined,
   KeyboardArrowRightOutlined,
 } from "@mui/icons-material";
+import left from "../assets/images/left.jpg";
 import styled from "styled-components";
 
 const Conatiner = styled.div`
@@ -34,7 +35,7 @@ const Wrapper = styled.div`
 `;
 
 const Slide = styled.div`
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -48,8 +49,8 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 50%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
 `;
 
 const InfoContainer = styled.div`
@@ -70,7 +71,8 @@ const Desc = styled.p`
 const Button = styled.button`
   padding: 10px;
   font-size: 20px;
-  background-color: #e9edc9;
+  color: white;
+  background-color: #84a59d;
   border: none;
 `;
 
@@ -84,7 +86,7 @@ function Slider() {
         {/* 슬라이드 작성 */}
         <Slide>
           <ImgContainer>
-            <Image />
+            <Image src={left} />
           </ImgContainer>
           <InfoContainer>
             <Title>Summer Sale</Title>
