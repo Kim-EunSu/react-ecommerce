@@ -37,6 +37,7 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   transition: all 1.5s ease;
+  /* 5. onClick에 따른 움직임거리 주기 */
   transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
@@ -83,7 +84,10 @@ const Button = styled.button`
 `;
 
 function Slider() {
+  //1. useState()사용
   const [slideIndex, setSlideIndex] = useState(0);
+
+  //   4. onClick기능에 따른 조건 부여
   const handleClick = (direction) => {
     if (direction === "left") {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
@@ -94,9 +98,11 @@ function Slider() {
 
   return (
     <Conatiner>
+      {/* 3. 화살표들한테 onClick기능 부여 */}
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <KeyboardArrowLeftOutlined></KeyboardArrowLeftOutlined>
       </Arrow>
+      {/* 2.Wrapper한테 props로 slideIndex주기 */}
       <Wrapper slideIndex={slideIndex}>
         {/* 슬라이드 작성 */}
         {sliderItems.map((item) => (
