@@ -1,9 +1,11 @@
-import Home from "./pages/Home";
-import Cart from "./pages/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 import Product from "./pages/Product";
 import ProductList from "./pages/ProductList";
-import Navbar from "./components/Navbar";
+import Cart from "./pages/Cart";
 import Footer from "./components/Footer";
 
 function App() {
@@ -12,9 +14,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Product" element={<Product />} />
-        <Route path="/ProductList" element={<ProductList />} />
-        <Route path="/Cart" element={<Cart />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/productlist" element={<ProductList />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
     </BrowserRouter>
