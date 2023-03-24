@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  border: 3px solid red;
   flex: 1;
   margin: 3px;
   height: 70vh;
@@ -20,7 +19,6 @@ const Info = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  border: 3px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -6,7 +6,6 @@ const Container = styled.div`
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  border: 3px solid green;
 `;
 
 function Categories() {

@@ -26,7 +26,6 @@ const Container = styled.div`
   margin: 5px;
   min-width: 280px;
   height: 350px;
-  border: 3px solid green;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,17 +37,8 @@ const Container = styled.div`
   }
 `;
 
-// const Circle = styled.div`
-//   width: 200px;
-//   height: 200px;
-//   border-radius: 50%;
-//   position: absolute;
-//   background-color: bisque;
-// `;
-
 const Image = styled.img`
   height: 75%; //원래 크기의 75%
-  border: 3px solid red;
   z-index: 2;
 `;
 
