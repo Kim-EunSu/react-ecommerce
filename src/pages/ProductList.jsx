@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import Announce from "../components/Announce";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import Products from "../components/Products";
 import { mobile } from "../responsive";
@@ -36,7 +34,6 @@ const Option = styled.option``;
 function ProductList() {
   return (
     <Container>
-      <Navbar />
       <Announce />
       <Title>Dresses</Title>
       <FilterContainer>
@@ -75,7 +72,6 @@ function ProductList() {
       </FilterContainer>
       <Products />
       <Newsletter />
-      <Footer />
     </Container>
   );
 }
