@@ -5,6 +5,7 @@ import {
 } from "@mui/icons-material";
 import { sliderItems } from "../data";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Conatiner = styled.div`
   width: 100%;
@@ -12,6 +13,7 @@ const Conatiner = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  ${mobile({ display: "none" })}
 `;
 
 const Arrow = styled.div`
