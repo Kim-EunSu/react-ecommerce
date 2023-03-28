@@ -20,16 +20,21 @@ const Goods = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  /* align-items: center; */
+  border: 3px solid blue;
 `;
 
 const Wrap = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
-  background-color: red;
+  width: 20%;
+  padding: 20px;
+  border: 3px solid green;
+  background-color: fefefe;
+  text-align: center;
 `;
 
 const Title = styled.h1`
@@ -39,7 +44,7 @@ const Title = styled.h1`
 `;
 
 const Image = styled.img`
-  width: 70%;
+  max-width: 150px;
   height: 30vh;
   object-fit: contain;
   ${mobile({ height: "40vh" })}
