@@ -1,8 +1,10 @@
+import { useState, useEffect } from "react";
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
 import Announce from "../components/Announce";
 import Newsletter from "../components/Newsletter";
 import { mobile } from "../responsive";
+import ProductList from "./ProductList";
 
 const Contaier = styled.div``;
 
@@ -108,50 +110,24 @@ const Button = styled.button`
 `;
 
 function Product() {
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => setData(json));
+  });
   return (
     <Contaier>
       <Announce />
       <Wrapper>
-        <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
-        </ImgContainer>
-        <InfoContainer>
-          <Title>Denim Jumpsuit</Title>
-          <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
-          </Desc>
-          <Price>$20</Price>
-          <FilterContainer>
-            <Filter>
-              <FilterTitle>Color</FilterTitle>
-              <FilterColor color="black" />
-              <FilterColor color="darkblue" />
-              <FilterColor color="gray" />
-            </Filter>
-            <Filter>
-              <FilterTitle>Size</FilterTitle>
-              <FilterSize>
-                <FilterSizeOption>XS</FilterSizeOption>
-                <FilterSizeOption>S</FilterSizeOption>
-                <FilterSizeOption>M</FilterSizeOption>
-                <FilterSizeOption>L</FilterSizeOption>
-                <FilterSizeOption>XL</FilterSizeOption>
-              </FilterSize>
-            </Filter>
-          </FilterContainer>
-          <AddContainer>
-            <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
-            </AmountContainer>
-            <Button>ADD TO CART </Button>
-          </AddContainer>
-        </InfoContainer>
+        {data &&
+          data.map((item) => (
+            <div key={item.id}>
+              <Title>{item.title}</Title>
+              <Image src={item.image}></Image>
+            </div>
+          ))}
       </Wrapper>
       <Newsletter />
     </Contaier>
