@@ -8,11 +8,13 @@ import ProductList from "./pages/ProductList";
 import Cart from "./pages/Cart";
 import Footer from "./components/Footer";
 import ProductDetail from "./components/ProductDetail";
+import Announce from "./components/Announce";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <Announce />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />

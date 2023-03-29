@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Announce from "../components/Announce";
 import Newsletter from "../components/Newsletter";
 import Products from "../components/Products";
 import { mobile } from "../responsive";
@@ -34,7 +33,6 @@ const Option = styled.option``;
 function ProductList() {
   return (
     <Container>
-      <Announce />
       <Title>Dresses</Title>
       <FilterContainer>
         <Filter>
