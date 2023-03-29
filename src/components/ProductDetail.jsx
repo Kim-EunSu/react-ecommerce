@@ -1,10 +1,11 @@
 import { Add, Remove } from "@mui/icons-material";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import Newsletter from "./Newsletter";
 
 const Container = styled.div`
   display: flex;
-  padding: 50px;
+  padding: 100px 50px;
 `;
 
 const Left = styled.div`
@@ -140,6 +141,7 @@ function ProductDetail() {
           </FilterContainer>
         </Right>
       </Container>
+      <Newsletter />
     </>
   );
 }
