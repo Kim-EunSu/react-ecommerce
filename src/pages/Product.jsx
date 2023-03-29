@@ -5,21 +5,16 @@ import Newsletter from "../components/Newsletter";
 import { mobile } from "../responsive";
 import ProductPage from "../components/ProductPage";
 
-const Contaier = styled.div``;
-
 const Wrapper = styled.div`
   padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  border: 3px solid red;
   ${mobile({ flexDirection: "column" })}
 `;
 
 const Goods = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(250px, auto));
   justify-content: center;
-  border: 3px solid blue;
 `;
 
 // const Wrap = styled.div`
@@ -50,7 +45,7 @@ const Goods = styled.div`
 
 function Product() {
   return (
-    <Contaier>
+    <>
       <Announce />
       <Wrapper>
         <Goods>
@@ -58,7 +53,7 @@ function Product() {
         </Goods>
       </Wrapper>
       <Newsletter />
-    </Contaier>
+    </>
   );
 }
 
